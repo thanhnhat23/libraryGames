@@ -1,0 +1,696 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+html, body {
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+}
+body {
+    display:flex;
+    flex-direction:column;
+    background:#eee;
+}
+/* ----------------------------LOADING WEB---------------------------- */
+.loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 100;
+}
+.loader.unactive {
+    opacity: 0;
+    pointer-events: none;
+}
+.loading {
+    position: absolute;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    top: 50%; left: 50%; right: 0;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    animation: animate 0.5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.loading span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(#14ffe9,#ffeb3b,#ff00e0);
+    animation: animate 0.5s linear infinite;
+    transition: 0.5s;
+}
+.loading span:nth-child(1){
+    filter: blur(5px);
+}
+.loading span:nth-child(2){
+    filter: blur(10px);
+}
+.loading span:nth-child(3){
+    filter: blur(25px);
+}
+.loading span:nth-child(4){
+    filter: blur(55px);
+}
+.loading:after {
+    content: '';
+    position: absolute;
+    top: 10px; left: 10px;right: 10px;bottom: 10px;
+    background: black;
+    border-radius: 50%;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* ----------------------------MENU---------------------------- */
+header {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    background-color: rgb(242, 239, 239);
+    width: 100vw;
+    min-width: 1910px;
+    height: 60px;
+    border-radius: 0 0 5px 0;
+    z-index: 10;
+}
+.sound {
+    position: absolute;
+    left: 91%;
+    top: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #dbdbdb solid 1px;
+    background-color: #dbdbdb;
+    z-index: 1;
+    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.bx-play {
+    color: black;
+    font-size: 35px;
+    position: relative;
+    top: 6px;
+    left: 1px;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+}
+.sound:hover {
+    background-color: black;
+    transition: 0.2s ease-in-out;
+}
+.bx-play:hover {
+    color: white;
+    transition: 0.2s ease-in-out;
+}
+.navbar {
+    width: 180px;
+    height: 336px;
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 30px;
+    position: relative;
+    left: 82.5%;
+    top: -153px;
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+.dropdown {
+    position: relative;
+    width: 0px;
+    left: -55%;
+}
+.active {
+    position: relative;
+    list-style: none;
+    color: black;
+    height: 60px;
+    font-size: 60px;
+    width: 72px;
+    left: 60%;
+    background: rgb(219, 219, 219);
+}
+.bx-menu {
+    font-size: 50px;
+    position: absolute;
+    top: 4px;
+    left: 15%;
+}
+header .navbar ul {  
+    list-style: none;
+}
+header .navbar ul li {
+    position: relative;
+}
+header .navbar ul li a {
+    font-size: 25px;
+    padding: 20px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover {
+    background: #333;
+    color: white;
+}
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 180px;
+    background: rgb(219, 219, 219);
+    display: none;
+    left: -109px;
+}
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+header .navbar ul li ul li ul {
+    left: -180px;
+    top: -1px;
+}
+header .navbar ul li:hover > ul {
+    display: initial;
+}
+.logo {
+    font-family: 'Jockey One', sans-serif;
+    color: black;
+    font-size: 45px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 60px;
+    position: relative;
+    top: -53px;
+}
+.thuonghieu {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 30%;
+    top: 10%;
+    border-radius: 90px;
+}
+.menu {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+.menu .bxs-game {
+    font-size: 50px;
+    color: rgb(255, 0, 0);
+    position: absolute;
+    top : 45%;
+    left : 60%;
+    transform: translate(-40%, -40%);
+    transition: 0.3s ease;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: black;
+}
+.login {
+    position: relative;
+    left : 95%;
+    top: -103px;
+    font-size: 25px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 99px;
+    cursor: pointer;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.2);  
+}
+.login:hover {
+    background-color: black;
+    transition: 0.1s ease-in-out;
+}
+.user:hover {
+    color: white;
+    transition: 0.1s ease-in-out;
+}
+nav {
+    position: relative;
+    z-index: 0;
+    height: 350px;
+    border-radius: 0 0 5px 5px;
+}
+.background {
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    width: 100vw;
+    min-width: 1835px;
+    height: 350px;
+    overflow: hidden;
+}
+.background1 {
+    height: 350px;
+    width: 50vw;
+    min-width: 1000px;
+}
+.background2 {
+    position: absolute;
+    height: 350px;
+    left: 918px;
+    width: 50vw;
+    min-width: 993px;
+    border-radius: 0 0 5px 0;
+}
+
+/* ----------------------------CARD---------------------------- */
+.avatar {
+    position: relative;
+}
+.avatar-box{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 999px;
+    border: white solid 3px;
+    top : -80px;
+    left: 25%;
+}
+.cardss {
+    position: relative;
+    height: 500px;
+    width: 300px;
+    z-index: 10;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.info-fb {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 0px;
+    width: 300px;
+    left: 0;
+    top: -13%;
+    padding: 20px;
+}
+h1 {
+    font-family: 'Jockey One', sans-serif;
+    cursor: default;
+}
+h2 {
+    position: relative;
+    left: 21%;
+    top: -10px;
+}
+.link {
+    position: relative;
+    left: 17%;
+    font-family: 'JetBrains Mono', monospace;
+    width: 110px;
+}
+.bxl-facebook-circle {
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    left: -7px;
+}
+.title {
+    position: relative;
+    padding: 13px;
+    top: -8%;
+    width: 275px;
+    left: 4%;
+    box-shadow: inset 0 0 7px 2px rgba(22, 22, 22, 0.2);
+    border: #F6F4F4 solid 1px;
+    border-radius: 12px;
+}
+p {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 25px;
+    color: #7b7575;
+}
+.link{ color: black; }
+.chat { color: black; }
+.gh { 
+    color: #7B7575; 
+    border: #7B7575 solid 1.5px;
+    padding: 6.5px;
+    border-radius: 999px;
+    width: 45px;
+    height: 45px;
+}
+.tw {
+    color: #7B7575; 
+    border: #7B7575 solid 1.5px;
+    padding: 6.5px;
+    border-radius: 999px;
+    width: 45px;
+    height: 45px;
+}
+.ig { 
+    color: #7B7575; 
+    border: #7B7575 solid 1.5px;
+    padding: 6.5px;
+    border-radius: 999px;
+    width: 45px;
+    height: 45px;
+}
+.link:hover { color: #4bb6b7; }
+.chat:hover { color: #4bb6b7; }
+.gh:hover { color: #4bb6b7; border: #4bb6b7 solid 1.5px; }
+.tw:hover { color: #4bb6b7; border: #4bb6b7 solid 1.5px; }
+.ig:hover { color: #4bb6b7; border: #4bb6b7 solid 1.5px; }
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    width: 190px;
+    height: 50px;
+    position: relative;
+    top: -5%;
+    left: 16.5%;
+}
+
+/* ----------------------------BOX---------------------------- */
+aside {
+    position: absolute;
+    top: 651px;
+    left: 1120px;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    min-width: 1530px;
+    height: 600px;
+}
+.page {
+    display: flex;
+    border: 3px solid black;
+    border-radius: 2px;
+    position: absolute;
+    top: 90%;
+    left: 36%;
+    width: auto;
+    height: 43px;
+    z-index: 100;
+}
+.page-num {
+    width: 39px;
+    height: 37px;
+    font-size: 16px;
+    font-family: "JetBrains Mono", sans-serif;
+}
+.page-n, .page-p {
+    width: 90px;
+    height: 37px;
+    font-size: 16px;
+    font-family: "JetBrains Mono", sans-serif;
+}
+.page-num,.page-p {
+    border-right: 1px solid #b4b4b4;
+}
+.page a {
+    color: black;
+    padding: 9px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0px;
+}
+.page a:hover {
+    background-color: black;
+    color: white;
+    padding: 9px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 0px;
+}
+.page a.active {
+    position: sticky;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.box {
+    display: grid;
+    place-content: center;
+    width: 99%;
+    height: 84%;
+    position: absolute;
+    top: 14%;
+    left: 0.7%;
+}
+.section {
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-self: center;
+}
+.card-page {
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    gap: 50px;
+    width: auto;
+    height: 365px;
+    border-radius: 15px;
+}
+.card {
+    position: relative;
+    list-style: none;
+    width: 220px;
+    transition: 0.3s ease;  
+}
+.card::before {
+    content: "";
+    display: block;
+    padding-bottom: 150%;
+    width: 100%;
+}
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 15px;
+    background-size: 350px;
+    background-position: center;
+    filter: brightness(0.9) saturate(1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: 0.3s ease;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+.card:hover .card-bg {
+    transform: scale(1.15) translateZ(0);
+    background-size: 268px;
+}
+.card-page:hover .card:not(:hover) {
+    transform: scale(0.9);
+}
+.card-page:hover > .card:not(:hover) .card-bg,
+.card-page:hover > .card:not(:hover) .card-category {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(8px);
+}
+.content {
+    top: 200px;
+    left: -19px;
+    padding: 25px;
+    position: absolute;
+}
+.card-heading {
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    width: 170px;
+    font-size: 15px;
+    line-height: 1;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+    cursor: default;
+}
+.card-category {
+    color: yellow;
+    width: 235px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    font-family: 'Jockey One', sans-serif;
+    cursor: default;
+}
+.download {
+    position: absolute;
+    background-color: #7B7575;
+    padding: 8px 8px 8px 15px;
+    width: 100px;
+    color: #edecec;
+    border-radius: 12px;
+    font-size: 12px;
+    top: 105px;
+    font-family: 'Jockey One', serif;
+}
+.download:hover {
+    background-color: #4bb6b7;
+    color: #0b1d28;
+}
+
+/* ----------------------------CHOOSE MUSIC---------------------------- */
+.overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    filter: blur(10px);
+    display: none;
+}
+.choose-music {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    border: #dbdbdb solid 1px;
+    background-color: #dbdbdb;
+    padding: 20px;
+    z-index: 100;
+    display: none;
+    box-shadow:0 0 4px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.choose-music.active {
+    opacity: 1;
+    display: block;
+}
+.all.blur {
+    filter: blur(10px);
+    pointer-events: none;
+}
+#musicFile {
+    display: none;
+}
+.custom {
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #7B7575;
+    color: white;
+    font-size: 26px;
+    border-radius: 35px;
+    transition: background-color 0.3s ease;
+    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.custom:hover {
+    background-color: black;
+}
+#changeMusic {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    border-radius: 99px;
+    border: #7B7575 solid 1px;
+    background-color: #7B7575;
+    z-index: 1;
+    color: white;
+    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#changeMusic:hover {
+    background-color: black;
+}
+.avt-music {
+    position: relative;
+    width: 230px; 
+    height: 230px;
+    border: 6px solid black;
+    border-radius: 50%;
+    top : -3%;
+    overflow: hidden;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avt-music img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.up {
+    position: absolute;
+    top: 50%;
+    left: 88.5%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: #dbdbdb solid 1px;
+    background-color: #dbdbdb;
+    z-index: 1;
+    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.down {
+    position: absolute;
+    top: 50%;
+    left: 84.5%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: #dbdbdb solid 1px;
+    background-color: #dbdbdb;
+    z-index: 1;
+    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.bxs-volume-low, .bxs-volume-full {
+    position: relative;
+    top: 22%; left: 2%;
+    color: black;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.up:hover, .down:hover {
+    background-color: black;
+    transition: 0.2s ease-in-out;
+}
+.bxs-volume-full:hover, .bxs-volume-low:hover {
+    color: white;
+    transition: 0.2s ease-in-out;
+}
