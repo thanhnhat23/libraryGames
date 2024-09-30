@@ -271,9 +271,9 @@ h2 {
     top: -8%;
     width: 275px;
     left: 4%;
-    box-shadow: inset 0 0 7px 2px rgba(22, 22, 22, 0.2);
-    border: #F6F4F4 solid 1px;
+    border: #b4b4b4 solid 1px;
     border-radius: 12px;
+    cursor: default;
 }
 p {
     font-size: 13px;
@@ -516,4 +516,23 @@ aside {
     background-color: black;
     color: white;
     transition: 0.1s ease-in-out;
+}
+
+/* ----------------------------DEMO---------------------------- */
+.demogame {
+    position: absolute;
+    font-family: 'Jockey One', monospace;
+    color: black;
+    font-size: 20px;
+    top: 8%;
+    left: 30%;
+    width: 285px;
+    height: 500px;
+}
+.demo {
+    position: absolute;
+    width: 285px;
+    height: 500px;
+    top: 15%;
+    left: 30%;
 }
