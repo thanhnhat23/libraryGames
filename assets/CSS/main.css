@@ -20,6 +20,7 @@ body {
 .loader {
     position: absolute;
     width: 100vw;
+    min-width: 1906px;
     height: 100vh;
     background-color: white;
     z-index: 100;
