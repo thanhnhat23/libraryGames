@@ -20,7 +20,11 @@ body {
 .loader {
     position: absolute;
     width: 100vw;
+<<<<<<< HEAD
     min-width: 1835px;
+=======
+    min-width: 1906px;
+>>>>>>> afa0e112fb1004ff174091063c1aba6d80c8f52e
     height: 100vh;
     background-color: white;
     z-index: 100;
