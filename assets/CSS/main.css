@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    text-transform: capitalize;
+    text-transform: capitalize; 
 }
 html, body {
     margin:0;
@@ -20,6 +20,7 @@ body {
 .loader {
     position: absolute;
     width: 100vw;
+    min-width: 1835px;
     height: 100vh;
     background-color: white;
     z-index: 100;
@@ -84,7 +85,7 @@ header {
     top: 0; left: 0; right: 0;
     background-color: rgb(242, 239, 239);
     width: 100vw;
-    min-width: 1910px;
+    min-width: 1906px;
     height: 60px;
     border-radius: 0 0 5px 0;
     z-index: 10;
