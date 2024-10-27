@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porn</title>
+    <link rel="icon" href="/Image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/porn.css">
+</head>
+<body>
+    <video id="video" autoplay loop muted>
+        <source src="/Image/Porn.mp4" type="video/mp4">
+    </video>
+    <script>
+        window.addEventListener("load", () => {
+        var vd = document.getElementById("video");
+        if (vd.muted) {
+            vd.muted = false;
+            vd.play();
+        }
+        })
+    </script>
+</body>
+</html>

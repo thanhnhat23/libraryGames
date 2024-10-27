@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fire Keeper</title>
+    <meta property="og:title" content="FIRE KEEPER ORIGIN" />
+    <meta property="og:description" content="Download game AAA miễn phí trọn đời" />
+    <meta property="og:image" content="/Image/ThumbNail.png" />
+    <meta property="og:url" content="https://thanhnhat23.github.io/project/" />
+    <meta property="og:site_name" content="FIRE_KEEPER" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/Image/logo.png" type="image/png">
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="loader">
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="choose-music">
+        <div class="avt-music">
+            <img src="/Image/meme.gif" alt="avatar" class="avt-ig">
+        </div>
+        <label for="musicFile" class="custom">
+            Chọn nhạc
+        </label>
+        <input type="file" id="musicFile" accept="audio/mp3">
+        <button id="changeMusic">Đổi nhạc</button>
+    </div>
+    <div class="all">
+        <header>
+            <div class="menu" id="menu-test">
+                <a href="index.html">
+                    <img class="thuonghieu" src="https://i.pinimg.com/564x/db/16/45/db1645cc1ed95625a5dff41ee9a0f164.jpg" alt="">
+                </a>
+            </div>
+            <a href="index.html" class="logo">FireKeeper</a>
+            <div class="login">
+                <span class="user">
+                    <a class="user" href="assets/HTML/register.html" target="_blank"><i class='bx bxs-user'></i></a>
+                </span>
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li class="dropdown"><a class="active" href="#"><i class='bx bx-menu'></i></a>
+                        <ul>
+                            <li><a class="mn" href="assets/HTML/register.html" target="_blank">Tài khoản</a></li>
+                            <li><a class="mn" href="#">Mini Game</a>
+                                <ul>
+                                    <li><a href="assets/HTML/xephinh.html" target="_blank">Xếp hình</a></li>
+                                    <li><a href="assets/HTML/banbong.html" target="_blank">Bắn bóng</a></li>
+                                    <li><a href="assets/HTML/snake.html" target="_blank">Snake</a></li>
+                                </ul>
+                            </li>
+                            <li><a class="un" href="#">Hack Fb</a></li>
+                            <li><a class="mn" href="assets/HTML/porn.html" target="_blank">Porn videos</a></li>
+                            <li><a class="mn" href="https://github.com/thanhnhat23/project" target="_blank">Source web</a></li>
+                            <li><a class="ms" href="#">Musics</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <audio id="music" autoplay loop muted>
+                <source src="assets/CSS/Music/Treachery.mp3">
+            </audio>
+            <button class="sound" onclick="enableSound()"><i class='bx bx-play'></i></button>
+            <button class="up" onclick="havolume()"><i class='bx bxs-volume-low'></i></button>
+            <button class="down" onclick="tangvolume()"><i class='bx bxs-volume-full'></i></button>
+        </header>
+        <nav>
+            <div class="background">
+                <img class="background1" src="/Image/Background.gif" alt="Background">
+                <img class="background2" src="/Image/Background.gif" alt="Background">
+            </div>
+        </nav>
+        <main class="cardss">
+            <div class="avatar">
+                <img class="avatar-box" src="/Image/Avatar2.jpg" alt="Avatar">
+            </div>
+            <div class="info-fb">
+                <h1>Thanh Nhat</h1>
+                <a  class="link" href="https://www.facebook.com/t.nhat.231026/" target="_blank">Facebook <i class='bx bxl-facebook-circle'></i></a>
+            </div>
+            <section class="title">
+                <h2 style="font-family: 'JetBrains Mono', monospace;letter-spacing: 5px;">About me</h2>
+                <article class="info">
+                    <p>
+                        -Web Developer <br>
+                        -Frontend Developer <br>
+                        -Provide free AAA games download links <br>
+                        -Donate $5 = Porn web access <br>
+                        -Add your favorite games contact 
+                        <a class="chat" href="https://www.facebook.com/t.nhat.231026" target="_blank">Here<i class='bx bxs-chat'></i></a> <br>
+                        -Mọi thắc mắc tự giải quyết ai rảnh mà trả lời má =D                    
+                    </p>
+                </article>
+            </section>
+            <article class="contact">
+                <a class="gh" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github'></i></a>
+                <a class="tw" href="https://x.com/ThanhNhat06" target="_blank"><i class='bx bxl-twitter'></i></a>
+                <a class="ig" href="https://www.instagram.com/_tnht.per06/" target="_blank"><i class='bx bxl-instagram'></i></a>
+            </article>
+        </main>
+        <aside>
+            <div class="page">
+                <a href="#" class="page-p" onclick="prevPage()">&laquo; Prev</a>
+                <a href="#" class="page-num" onclick="changeDiv(1)">1</a>
+                <a href="#" class="page-num" onclick="changeDiv(2)">2</a>
+                <a href="#" class="page-num" onclick="changeDiv(3)">3</a>
+                <a href="#" class="page-num" onclick="changeDiv(4)">4</a>
+                <a href="#" class="page-num" onclick="changeDiv(5)">5</a>
+                <a href="#" class="page-num" onclick="changeDiv(6)">6</a>
+                <a href="#" class="page-n" onclick="nextPage()">Next &raquo;</a>
+            </div>
+            <section class="section">
+                <div id="page1" class="card-page">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/DS.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Dark Souls III</div>
+                            <h3 class="card-heading">Thắp lên ngọn lửa khởi nguyên</h3>
+                            <a class="download" href="assets/HTML/download.html#link1" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/Sekiro.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Sekiro</div>
+                            <h3 class="card-heading">Hành trình đi tìm nhẫn đạo</h3>
+                            <a class="download" href="assets/HTML/download.html#link2" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/ER.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Elden Ring</div>
+                            <h3 class="card-heading">Trật tự hay hỗn mang?-Elden Lord</h3>
+                            <a class="download" href="assets/HTML/download.html#link3" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/LOP.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Lies of P</div>
+                            <h3 class="card-heading">Lời nói dối ngọt ngào</h3>
+                            <a class="download" href="assets/HTML/download.html#link4" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/BMW.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Black Myth Wukong</div>
+                            <h3 class="card-heading">Chấp niệm và nghiệp duyên</h3>
+                            <a class="download" href="assets/HTML/download.html#link5" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2 -->
+                <div id="page2" class="card-page" style="display: none;">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/GOT.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Ghost Of Tsushima</div>
+                            <h3 class="card-heading">Kiếm ma cuối cùng</h3>
+                            <a class="download" href="assets/HTML/download.html#link6" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/CP2077.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Cyper punk 2077</div>
+                            <h3 class="card-heading">Tân kỉ nguyên</h3>
+                            <a class="download" href="assets/HTML/download.html#link7" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/HL.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Hogwarts Legacy</div>
+                            <h3 class="card-heading">Ánh bình minh của witcher</h3>
+                            <a class="download" href="assets/HTML/download.html#link8" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/OriW.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Ori and the Will of the Wisps</div>
+                            <h3 class="card-heading">Hành trình tới vùng đất câm lặng</h3>
+                            <a class="download" href="assets/HTML/download.html#link9" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/OriF.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Ori and the blind of forest</div>
+                            <h3 class="card-heading">Ánh sáng của hi vọng nơi rừng sâu tăm tối</h3>
+                            <a class="download" href="assets/HTML/download.html#link10" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3 -->
+                <div id="page3" class="card-page" style="display: none;">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/RTR.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Rise of the Tomb Raider</div>
+                            <h3 class="card-heading">Cuộc chiến sinh tử với kẻ địch không đội trời chung</h3>
+                            <a class="download" href="assets/HTML/download.html#link11" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/STR.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Shadow of the Tomb Raider</div>
+                            <h3 class="card-heading">Mọi sự ngu dốt đều phải trả giá</h3>
+                            <a class="download" href="assets/HTML/download.html#link12" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/GOW.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">God of War Ragnarök</div>
+                            <h3 class="card-heading">Hoàng hôn của chư thần</h3>
+                            <a class="download" href="assets/HTML/download.html#link13" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/SOT.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Sea of Thieves</div>
+                            <h3 class="card-heading">Thời đại của hải tặc</h3>
+                            <a class="download" href="assets/HTML/download.html#link14" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/VHTGW.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Valient Hearts The Great War</div>
+                            <h3 class="card-heading">Trái tim quả cảm</h3>
+                            <a class="download" href="assets/HTML/download.html#link15" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 4 -->
+                <div id="page4" class="card-page" style="display: none;">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/TLOU1.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">The last of us part 1</div>
+                            <h3 class="card-heading">Hành trình của bi kịch</h3>
+                            <a class="download" href="assets/HTML/download.html#link16" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/TLOU2.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">The last of us Part 2</div>
+                            <h3 class="card-heading">Ai đúng ai sai?</h3>
+                            <a class="download" href="assets/HTML/download.html#link17" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/DG.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Days Gone</div>
+                            <h3 class="card-heading">Freaker-Xác sống tân thế giới</h3>
+                            <a class="download" href="assets/HTML/download.html#link18" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/AW2.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Alan Wake 2</div>
+                            <h3 class="card-heading">Bóng tối trở lại</h3>
+                            <a class="download" href="assets/HTML/download.html#link19" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/VHCH.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Valient Hearts:Coming Home</div>
+                            <h3 class="card-heading">Trở về !!</h3>
+                            <a class="download" href="assets/HTML/download.html#link20" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 5 -->
+                <div id="page5" class="card-page" style="display: none;">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/LNM.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Little nightmares</div>
+                            <h3 class="card-heading">Bí ẩn trên con tàu THE MAW</h3>
+                            <a class="download" href="assets/HTML/download.html#link21" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/LNM2.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Little nightmares 2</div>
+                            <h3 class="card-heading">Cơn ác mộng giữa thực tại</h3>
+                            <a class="download" href="assets/HTML/download.html#link22" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/QB.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Quantum break</div>
+                            <h3 class="card-heading">Tận cùng của thời gian</h3>
+                            <a class="download" href="assets/HTML/download.html#link23" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/B2.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Bendy and the ink machine</div>
+                            <h3 class="card-heading">Disney nhưng đen tối</h3>
+                            <a class="download" href="assets/HTML/download.html#link24" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/B1.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Bendy and the dark revival</div>
+                            <h3 class="card-heading">Bí ẩn ink demon</h3>
+                            <a class="download" href="assets/HTML/download.html#link25" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 6 -->
+                <div id="page6" class="card-page" style="display: none;">
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/FAR.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">FAR-Changing tides</div>
+                            <h3 class="card-heading">Cánh buồm cô độc</h3>
+                            <a class="download" href="assets/HTML/download.html#link26" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/Stray.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Stray</div>
+                            <h3 class="card-heading">Hành trình gieo hi vọng</h3>
+                            <a class="download" href="assets/HTML/download.html#link27" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/W40K.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Warhammer 40k</div>
+                            <h3 class="card-heading">Biên niên sử warhammer</h3>
+                            <a class="download" href="assets/HTML/download.html#link28" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/MN.gif);"></div>
+                        <div class="content">
+                            <div class="card-category">Minecraft ModPack</div>
+                            <h3 class="card-heading">Fantastic World</h3>
+                            <a class="download" href="assets/HTML/download.html#link29" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-bg" style="background-image: url(/Image/TGYH.jpg);"></div>
+                        <div class="content">
+                            <div class="card-category">Thank goodness you're here</div>
+                            <h3 class="card-heading">Hài ẻ</h3>
+                            <a class="download" href="assets/HTML/download.html#link30" target="_blank">Download <i class='bx bxs-download'></i></a>
+                        </div>
+                    </div>
+            </section>
+        </aside>
+        <footer class="end">
+            <p>&copy; 2024 Thanh Nhat Website</p>
+        </footer>
+    </div>  
+    <script src="assets/JS/main.js"></script>
+</body>
+</html>
+<!--
+git add .
+git commit -m "message"
+git remote add origin https://github.com/thanhnhat23/project.git
+git push -u origin main 
+git fetch origin main:tmp
+git rebase tmp
+-->
