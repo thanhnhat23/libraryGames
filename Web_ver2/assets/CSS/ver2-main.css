@@ -17,10 +17,6 @@ body {
     width: 100%;
     height: 100%;
     top : 0; left: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 body::before {
     content: "";
@@ -30,16 +26,13 @@ body::before {
     height: 100%;
     min-width: 1860px;
     z-index: -1;
-    background: url(https://images3.alphacoders.com/135/thumb-1920-1352926.png) no-repeat;
+    background: url(../pages/private/honny.jpg) no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center 0;
     filter: brightness(0.5) saturate(0) contrast(1.3) blur(1px);
 }
 p {
     cursor: default;
-}
-img {
-    pointer-events: none;
 }
 /* ----------------------------HEADER---------------------------- */
 .main-header {
@@ -257,36 +250,6 @@ img {
     pointer-events: none;
 }
 
-/* ----------------------------LOGO---------------------------- */
-.lg {
-    pointer-events: none;
-}
-.ER {
-    width: 400px;
-    height: 100px;
-    position: absolute;
-    bottom: 30%; left: 39%; 
-}
-.STR {
-    width: 500px;
-    height: 300px;
-    position: absolute;
-    bottom: 17%; left: 37%;
-}
-.GOT {
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    bottom: 25%; left: 40%;
-}
-.TLOU {
-    width: 400px;
-    height: 200px;
-    position: absolute;
-    bottom: 18%; left: 41%;
-}
-/* ----------------------------------------------------------- */
-
 .active-slide {
     display: block;
 }
@@ -426,16 +389,16 @@ img {
 }
 .card-page {
     position: relative;
-    top: -100px; left : 0;
+    top: -120px; left : 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-items: start;
     width: 1250px;
-    height: 850px;
+    height: auto;
 }
 .card {
     position: relative;
-    top: 105px;
+    top: 0;
     list-style: none;
     width: calc(33.33% - 20px);
     margin: 10px;
@@ -460,7 +423,7 @@ img {
     transform: scale(1) translateZ(0);
     transition: 0.3s ease;
     width: 400px;
-    height: 400px;
+    height: 269px;
     background-repeat: no-repeat;
     background-color: black;
     border-image: fill 0 linear-gradient(#0001 ,#000);
@@ -643,123 +606,4 @@ img {
 }
 .help:hover {
     background-color: #333;
-}
-/* ----------------------------CHOOSE MUSIC---------------------------- */
-.check {
-    position: relative;
-    transform: translate(50%, 50%);
-    width: 320px;
-    height: 50px;
-    padding: 10px;
-    font-size: 20px;
-}
-.choose-music {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 500px;
-    border-radius: 10px;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
-    padding: 20px;
-    z-index: 9999999;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    box-shadow:0 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-.choose-music.active {
-    opacity: 1;
-    visibility: visible;
-}
-.bx-x {
-    font-size: 50px;
-}
-#icon {
-    height: 50px;
-    width: 50px;
-    position: absolute;
-    top: 5%; right: 5%;
-    cursor: pointer;
-}
-#musicFile {
-    display: none;
-}
-.custom {
-    position: absolute;
-    top: 85%;
-    transform: translate(-50%, -50%);
-}
-#changeMusic {
-    left: 30%;
-    border: #000;
-}
-.custom:nth-child(2) {
-    left: 70%;
-}
-.avt-music {
-    position: relative;
-    width: 230px; 
-    height: 230px;
-    border: 6px solid black;
-    border-radius: 50%;
-    top : -3%;
-    overflow: hidden;
-    margin: 10px auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.avt-music img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.up {
-    position: absolute;
-    top: 50%;
-    left: 88.5%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border-radius: 50%;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
-    z-index: 1;
-    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-.down {
-    position: absolute;
-    top: 50%;
-    left: 84.5%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border-radius: 50%;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
-    z-index: 1;
-    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-.bxs-volume-low, .bxs-volume-full {
-    position: relative;
-    top: 22%; left: 2%;
-    color: black;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-.up:hover, .down:hover {
-    background-color: black;
-    transition: 0.2s ease-in-out;
-}
-.bxs-volume-full:hover, .bxs-volume-low:hover {
-    color: white;
-    transition: 0.2s ease-in-out;
 }
