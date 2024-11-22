@@ -16,6 +16,23 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
+    <div class="choose-music">
+        <div class="avt-music">
+            <img src="../assets/Image/meme.gif" alt="avatar" class="avt-ig">
+        </div>
+        <label for="musicFile" class="btn custom">
+            Chọn nhạc
+        </label>
+        <input type="file" id="musicFile" accept="audio/mp3">
+        <button id="changeMusic" class="btn custom">Đổi nhạc</button>
+        <a id="icon"><i class='bx bx-x'></i></a>
+        <input type="text" id="input" class="check" placeholder="Dán link nhạc youtube vào">
+    </div>
+    <iframe id="output" width="0" height="0" src="" title="MoreM" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
+        picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
     <audio id="music" autoplay loop muted>
         <source src="assets/CSS/Music/Mortals x Royalty.mp3" type="audio/mp4">
     </audio>
@@ -62,8 +79,8 @@
             </div>
             <div class="upper-right">
                 <a href="../Web_ver1/assets/HTML/porn.html" class="list" target="_blank">Porn videos</a>
-                <a href="" class="list">Musics</a>
-                <a href="" class="list">Chat room</a>
+                <a href="#" class="list" id="changeMusics">Musics</a>
+                <a href="register.html" class="list">Chat room</a>
             </div>
         </div>
     </header>
