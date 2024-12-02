@@ -310,6 +310,9 @@ img {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
+.dot.active {
+    background-color: rgb(0 ,187 ,255);
+}
 .button {
     display: flex;
     justify-content: space-between;

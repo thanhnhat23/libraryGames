@@ -1,5 +1,7 @@
-// Add effect menu header
+// Khai bao
+const test = document.querySelectorAll("a");
 const OFlist = document.querySelectorAll('.list');
+// Add effect menu header
 OFlist.forEach(list => {
     list.addEventListener('click', function() {
         OFlist.forEach(list =>
@@ -29,14 +31,14 @@ function disableSound() {
     }
 }
 // Play video
-function convertToEmbedURL(url) {
+function convertToEmbed(url) {
     const videoID = url.split("v=")[1]?.split("&")[0]; // Lấy video ID từ URL
     return videoID ? `https://www.youtube.com/embed/${videoID}` : "";
 }
 function playVideo() {
     const input = document.getElementById("input");
     const iframe = document.getElementById("output");
-    const url = convertToEmbedURL(input.value.trim()); // Chuyển URL sang embed
+    const url = convertToEmbed(input.value.trim()); // Chuyển URL sang embed
     if (url) {
         iframe.src = `${url}?autoplay=1&loop=1`;
         input.value = "";
@@ -51,16 +53,6 @@ document.getElementById("input").addEventListener("keypress", function (event) {
         document.querySelector(".all").classList.remove("blur");
     }
 });
-// Thay link
-window.onload = function() {
-    // Lấy URL từ query string
-    const urlParams = new URLSearchParams(window.location.search);
-    const videoUrl = urlParams.get('url');
-    if (videoUrl) {
-        // Gán URL vào src của iframe
-        document.getElementById("links").src = videoUrl;
-    }
-}
 // Thay musics
 document.getElementById("changeMusic").addEventListener("click", function(){
     const fileInput = document.getElementById("musicFile");
@@ -74,7 +66,6 @@ document.getElementById("changeMusic").addEventListener("click", function(){
         audioPlayer.play();
     }
 })
-const elements = document.querySelectorAll("header, nav, main, footer, aside");
 document.getElementById("icon").addEventListener("click", function(){
     document.querySelector(".choose-music").classList.remove("active");
     document.querySelector(".overlay").classList.remove("active");
@@ -85,7 +76,6 @@ document.getElementById("changeMusics").addEventListener("click", function(){
     document.querySelector(".overlay").classList.add("active");
 })
 // Kiem tra game da update chua
-const test = document.querySelectorAll("a");
 test.forEach(link => {
     link.addEventListener("click", event => {
         const href = link.getAttribute("href");

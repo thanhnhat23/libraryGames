@@ -1,7 +1,12 @@
+// Khai bao
 const slides = document.querySelectorAll(".slide");
 const dots = document.querySelectorAll(".dot");
 const more = document.querySelectorAll(".more");
 let currentIndex = 0;
+let HandleChange = setInterval(() => { nextSlides(1); }, 6000);
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+
 // Đánh dấu dot đầu tiên là active
 updateDots();
 updateMoreOpacity();
@@ -36,14 +41,11 @@ function currentSlide(n) {
     updateSlides();
 }
 // Tự động chuyển slide mỗi 6 giây
-let HandleChange = setInterval(() => { nextSlides(1); }, 6000);
-let next = document.querySelector('.next');
 next.onclick = function () {
     clearInterval(HandleChange);
     nextSlides(1);
     HandleChange = setInterval(() => { nextSlides(1); }, 6000);
 };
-let prev = document.querySelector('.prev');
 prev.onclick = function () {
     clearInterval(HandleChange);
     nextSlides(-1);
