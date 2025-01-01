@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Sign up</title>
+    <link rel="icon" href="../../../assets/Image/logo.png" type="image/png">
+    <link rel="stylesheet" href="../Web_ver2/assets/CSS/register.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <form>
+          <h1>Đăng kí</h1>
+          <div class="form-control">
+            <input type="text" id="username" placeholder="Tên" />
+            <small id="username-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="email" id="email" placeholder="Email" />
+            <small id="email-error"></small>
+            <span></span>
+          </div>
+          <div class="form-control">
+            <input type="password" id="password" placeholder="Mật khẩu" />
+            <small id="password-error"></small>
+            <span></span>
+          </div>
+          <button type="submit" value="submit">Đăng kí</button>
+          <span>Đăng nhập khác</span>
+          <div class="social-container">
+            <a href="https://www.facebook.com/login.php" class="social" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://accounts.google.com/login?hl=vi" class="social" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://tiktok.com/login" class="social" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>
+      <div class="form-container login-container">
+        <form class="form-lg">
+          <h1>Đăng nhập</h1>
+          <div class="form-control2">
+            <input type="email" class="email-2" placeholder="Email" />
+            <small class="email-error-2"></small>
+            <span></span>
+          </div>
+          <div class="form-control2">
+            <input type="password" class="password-2" placeholder="Mật khẩu" />
+            <small class="password-error-2"></small>
+            <span></span>
+          </div>
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label for="">Ghi nhớ</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Quên mật khẩu?</a>
+            </div>
+          </div>
+          <button type="submit" value="submit">Đăng nhập</button>
+          <span>Đăng nhập khác</span>
+          <div class="social-container">
+            <a href="https://www.facebook.com/login.php" class="social" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://accounts.google.com/login?hl=vi" class="social" target="_blank"><i class="fa-brands fa-google"></i></a>
+            <a href="https://tiktok.com/login" class="social" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">
+              Quay lại <br />
+              đăng nhập
+            </h1>
+            <p>Có tài khoản rồi qua đây làm chó gì?</p>
+            <button class="ghost" id="login">
+              Đăng nhập
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Tạo account<br />
+              tại đây
+            </h1>
+            <p>
+              Nếu bạn chưa có tài khoản , thì tạo mẹ đi đọc đọc cái gì ?
+            </p>
+            <button class="ghost" id="register">
+              Đăng kí
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../Web_ver2/assets/JS/register.js"></script>
+  </body>
+</html>           
