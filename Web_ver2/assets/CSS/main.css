@@ -389,9 +389,7 @@ img {
 .section {
     position: relative;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
 }
 .card-page {
     position: relative;
@@ -484,7 +482,7 @@ img {
 /* ----------------------------aside----------------------------- */
 .info-game {
     position: relative;
-    top: 330px; left: 0;
+    top: 330px;left: 0;
     width: 100%;
     min-width: 1860px;
 }
@@ -494,7 +492,7 @@ img {
 }
 .if {
     position: relative;
-    bottom: 10px; left: 44%;
+    bottom: 10px;left: 44%;
     width: 120px;
     height: 40px;
     font-size: 16px;
@@ -513,7 +511,7 @@ img {
 }
 .trailer {
     position: relative;
-    bottom: -28%; left: 0;
+    bottom: -28%;left: 0;
     width: 600px;
     height: 200px;
     background-color: #212121;
