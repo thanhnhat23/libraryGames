@@ -16,7 +16,7 @@ body {
     align-items: center;
     width: 100%;
     height: 100%;
-    top : 0; left: 0;
+    margin: 0;
 }
 body::before {
     content: "";
@@ -217,7 +217,7 @@ p {
 .list.active {
     color: rgb(0, 187, 255);
 }
-/* ----------------------------MAIN------------------.---------- */
+/* ----------------------------MAIN----------------------------- */
 .content-main {
     position: relative;
     top: 400px; left: 0;
@@ -231,23 +231,24 @@ p {
 }
 .card-page {
     position: relative;
-    top: -100px; left : 0;
+    top: -100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 1250px;
-    height: 2600px; /* Imortant */
+    height: auto; /* Imortant */
 }
 .card {
     position: relative;
     top: 105px;
     list-style: none;
     width: calc(22.22% - 10px);
-    margin: 22px;
+    margin: 22px;   
     height: 200px;
     transition: 0.3s ease;  
     cursor: pointer;
     border-radius: 15px;
+    margin-bottom: 92px;
 }
 .card::before {
     content: "";
@@ -295,16 +296,16 @@ p {
     pointer-events: none;
 }
 /* ----------------------------FOOTER----------------------------- */
-.info {
+footer {
+    position: relative;
     display: flex;
     gap: 20px; 
-    top: 400px; left: 0;
+    top: 400px;
     padding: 25px;
     justify-content: center;
     font-size: 30px;
     width: 100%;
     height: 200px;
-    position: relative;
     background-color: #212121;
     border-top: #333 2px solid;
     box-shadow: #333 0 0 5px 2px;
