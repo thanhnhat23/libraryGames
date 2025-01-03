@@ -45,8 +45,8 @@ h1 {
     width: 100%;
     min-width: 1860px;
     display: flex;
-    justify-content: center;
     text-align: center;
+    justify-content: center;
     gap: 150px
 }
 .ver {
