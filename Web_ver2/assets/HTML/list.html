@@ -429,8 +429,7 @@
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
         import { getDatabase, ref, update, onValue, get, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-    
-        // Firebase configuration
+        // Thong so cau hinh Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyDC2HfDkadLfHKos6prmlRlwfAVd1eTVBQ",
             authDomain: "librarygames-da3a1.firebaseapp.com",
@@ -441,37 +440,35 @@
             appId: "1:1078421714372:web:bc6f84bb10ecfa47dda091",
             measurementId: "G-E776GSR4EG"
         };
-        // Initialize Firebase
+        // Khoi tao Firebase
         const app = initializeApp(firebaseConfig);
         const database = getDatabase(app);
-        // Get all cards
         const card = document.querySelectorAll('.card');
-        // Function to update view count from Firebase
+        // Ham cap nhat view tu Firebase
         function updateViewCounts() {
             card.forEach(card => {
                 const id = card.getAttribute('data-id');
                 const viewCountRef = ref(database, 'viewCounts/' + id);
-    
-                // Listen for changes in view count
+                // Xem su thay doi view total
                 onValue(viewCountRef, (snapshot) => {
                     const count = snapshot.exists() ? snapshot.val() : 0;
                     card.querySelector('.view-count').textContent = count;
                 });
             });
         }
-        // Initialize view counts
+        // Cap nhat view total
         updateViewCounts();
-        // Update view count on click
+        // Tang view total khi click vao card
         card.forEach(card => {
             card.addEventListener('click', function() {
                 const id = card.getAttribute('data-id');
                 const viewCountRef = ref(database, 'viewCounts/' + id);
-                // Get the current view count from Firebase
+                // Lay so luong view tu Firebase
                 get(viewCountRef).then((snapshot) => {
                     let currentCount = snapshot.exists() ? snapshot.val() : 0;
-                    currentCount++; // Increment the current count
-                    // Update the view count in Firebase
-                    set(viewCountRef, currentCount) // Sử dụng set để cập nhật giá trị
+                    currentCount++; // Tang so luong view
+                    // Cap nhat view total trong Firebase
+                    set(viewCountRef, currentCount) // Su dung set de cap nhat du lieu
                         .then(() => {
                             console.log("View count updated successfully.");
                         })
