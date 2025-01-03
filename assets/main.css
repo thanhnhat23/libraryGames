@@ -27,6 +27,7 @@ h1 ,h3 {
     pointer-events: none;
     display: flex;
     justify-content: center;
+    text-align: center;
     width: 100%;
     min-width: 1860px;
     top : 30%;left: 0;
@@ -45,6 +46,7 @@ h1 {
     min-width: 1860px;
     display: flex;
     justify-content: center;
+    text-align: center;
     gap: 150px
 }
 .ver {
