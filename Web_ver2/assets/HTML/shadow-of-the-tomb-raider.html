@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Aqua - Thư viện game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="The Aqua - Thư viện game" />
+    <meta property="og:description" content="Download game AAA miễn phí trọn đời" />
+    <meta property="og:image" content="../../../assets/Image/ThumbNail.png" />
+    <meta property="og:url" content="https://thanhnhat23.github.io/project/" />
+    <meta property="og:site_name" content="AQUA_KEEPER" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="../../../assets/Image/logo2.png" type="image/png">
+    <link rel="stylesheet" href="../CSS/pages.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <audio id="music" autoplay loop muted>
+        <source src="../CSS/Music/Mortals x Royalty.mp3" type="audio/mp4">
+    </audio>
+    <header class="main-header">
+        <div class="header-top">
+            <div class="thumb-header-top">
+                <svg width="644" height="82" viewBox="0 0 644 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M643 1.53089e-05C474.064 1.53089e-05 508.965 1.52614e-05 333.479 78.4651C324.211 82.6094 313.446 82.4917 304.283 78.1179C140.633 1.5316e-05 175.034 1.62906e-05 0.99999 1.53089e-05C-11.5 1.52384e-05 318.787 1.53089e-05 318.787 1.53089e-05C318.787 1.53089e-05 318.787 1.53089e-05 318.787 1.53089e-05C468.88 1.53089e-05 652.358 1.53089e-05 643 1.53089e-05Z" fill="#212121"/>
+                </svg>                      
+            </div>
+            <div class="logo">
+                <button class="logo-btn" onclick="enableSound()">
+                    <img src="../../../assets/Image/logo.jpg" alt="logo" class="logo-img">
+                </button>                
+            </div>
+            <div class="top-left">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                  <g>
+                    <path
+                      d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                  </g>
+                </svg>
+                <input id="query" class="input" type="search" placeholder="Search..." name="searchbar"/>
+              </div>
+            <div class="top-right">
+                <article class="contact">
+                    <a class="gh" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a class="tw" href="https://www.facebook.com/t.nhat.231026/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a class="ig" href="https://www.instagram.com/_tnht.per06/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                </article>
+            </div>
+        </div>
+        <div class="header-upper">
+            <div class="thumb-header-upper">
+                <svg width="644" height="82" viewBox="0 0 644 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M643 1.53089e-05C474.064 1.53089e-05 508.965 1.52614e-05 333.479 78.4651C324.211 82.6094 313.446 82.4917 304.283 78.1179C140.633 1.5316e-05 175.034 1.62906e-05 0.99999 1.53089e-05C-11.5 1.52384e-05 318.787 1.53089e-05 318.787 1.53089e-05C318.787 1.53089e-05 318.787 1.53089e-05 318.787 1.53089e-05C468.88 1.53089e-05 652.358 1.53089e-05 643 1.53089e-05Z" fill="#000"/>
+                </svg>                    
+            </div>
+            <div class="upper-left">
+                <a href="../../index.html" class="list">Trang chủ</a>
+                <a href="../HTML/list.html" class="list">Thư viện game</a>
+                <a href="https://github.com/thanhnhat23/project" class="list" target="_blank">Source web</a>
+            </div>
+            <div class="upper-right">
+                <a href="../../../Web_ver1/assets/HTML/porn.html" class="list">Porn videos</a>
+                <a href="" class="list">Musics</a>
+                <a href="" class="list">Chat room</a>
+            </div>
+        </div>
+    </header>
+    <nav class="background">
+        <div class="slider">
+            <div class="slide">
+                <img src="../../../assets/Image/STRThumb.jpg" alt="GAMES" class="slide-img">
+            </div>
+        </div>
+        <div class="end-card" style="top: 98%;"></div>
+        <div class="thumb-end-card" style="top: 87.5%;">
+            <svg width="248" height="64" viewBox="0 0 248 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.47197 63.4983C9.39364 63.4983 44.931 63.4983 113.697 4.1445C119.585 -0.937736 128.429 
+                -0.890061 134.26 4.25753C201.367 63.4983 235.063 63.4983 246.972 63.4983C259.472 63.4983 124.029 
+                63.4983 124.029 63.4983C124.029 63.4983 124.029 63.4983 124.029 63.4983C124.029 63.4983 -8.88618 
+                63.4983 0.47197 63.4983Z" fill="#000"/>
+            </svg>
+        </div>
+    </nav>
+    <main class="content-main">
+        <h1>Shadow of the Tomb Raider</h1>
+        <div style="display: flex; justify-content: center;">
+            <iframe width="1160" height="690" src="https://www.youtube.com/embed/CoLBrnC2F9g?si=uis1vKv42lg8WGvq" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+        </div>
+        <div class="info-games">
+
+            <div class="info-g">
+                <div class="bg">
+                    <h4>Thông tin chung:</h4>
+                </div>
+                <div class="container-doc">
+                    <span class="doc"></span>
+                    <span class="doc"></span>
+                </div>
+                <div class="content-info">
+                    <p class="i">Phát triển: Crystal Dynamics</p>
+                    <p class="i">Phiên bản: PC,PS4</p>
+                    <p class="i">Thể loại: Giải đố-Trí tuệ</p>
+                </div>
+            </div>
+
+            <div class="info-g">
+                <div class="bg">
+                    <h4>Thông tin về game:</h4>
+                </div>
+                <div class="content-info">
+                    <p>- Version: 1.0.489.0 <br> - Việt Hóa <br> - Online </p>
+                </div>
+            </div>
+
+            <div class="info-g">
+                <div class="bg">
+                    <h4>Hướng dẫn cài đặt:</h4>
+                </div>
+                <div class="content-info">
+                    <p> - Nếu game có nhiều part thì cứ giải nén 1 part tất cả các part còn lại sẽ tự giải nén
+                        - Online Coop - Multiplayer thông qua Steam + Epic Auth (Có thể tham gia chơi Online cùng những ai có bản quyền game nếu cùng phiên bản)
+                        <br>- Online Coop - Multiplayer thông qua mạng LAN ảo
+                        <br>- LAN Coop - Multiplayer
+                        <br>- Chơi Online Steam thì nhớ mở + login steam + Active Steam (nếu có nút) trên Launcher 1 lần và khi game bật 1 popup lên trình duyệt thì  login tài khoản Epic vào rồi Allow
+                        <br>- Save game location: %userprofile%\Documents\Shadow of the Tomb Raider\<số steam id Offline / LAN hoặc Online Steam>
+                        <br>Đã bao gồm các DLC:
+                        <br>- Shadow of the Tomb Raider - Skills Booster Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Chromosphere Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Baily’s Beads Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Corona Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Orange Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Original Game Soundtrack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Robes of Puka Huk (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Tactical Adventurer (Black) Outfit (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Explorer Outfit (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Outfit: Brocken
+                        <br>- Shadow of the Tomb Raider - Sinchi Chiqa Battle Dress
+                        <br>- Shadow of the Tomb Raider - Tunic of the Exiled Fox (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Puka Huk’s Bow (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - K&H Kap Pistol (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Sedgewick 707 Shotgun (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Weapon: Umbrage 3-80
+                        <br>- Shadow of the Tomb Raider - Oathtaker's Bow
+                        <br>- Shadow of the Tomb Raider - Exiled Fox’s Bow (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - The Forge Content
+                        <br>- Shadow of the Tomb Raider - The Pillar Content
+                        <br>- Shadow of the Tomb Raider - Official Wallpaper (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Deluxe Extras
+                        <br>- Shadow of the Tomb Raider - Croft Edition Extras
+                        <br>- Shadow of the Tomb Raider - Season Pass (Shadow of the Tomb Raider - Definitive Upgrade)
+                        <br>- Shadow of the Tomb Raider - Spectre Gear
+                        <br>- Shadow of the Tomb Raider - Golden Eagle Gear
+                        <br>- Shadow of the Tomb Raider - Fear Incarnate Gear
+                        <br>- Shadow of the Tomb Raider - Classic Trinity Gear
+                        <br>- Shadow of the Tomb Raider - Myth Hunter Gear
+                        <br>- Shadow of the Tomb Raider - Force of Chaos Gear
+                        <br>- Shadow of the Tomb Raider - The Forge
+                        <br>- Shadow of the Tomb Raider - The Pillar
+                        <br>- Shadow of the Tomb Raider - The Nightmare
+                        <br>- Shadow of the Tomb Raider - The Price of Survival
+                        <br>- Shadow of the Tomb Raider - The Serpent's Heart
+                        <br>- Shadow of the Tomb Raider - The Grand Caiman
+                        <br>- Shadow of the Tomb Raider - Black Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Red Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Yellow Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - White Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Early Access Deluxe/Croft Edition Owner
+                        <br>- Shadow of the Tomb Raider - The Path Home
+                        <br>- Shadow of the Tomb Raider - Sworn Defender
+                        <br>- Shadow of the Tomb Raider - Definitive Edition Content
+                        <br>- Shadow of the Tomb Raider - Puka Huk’s Bow (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - K&H Kap Pistol (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Sedgewick 707 Shotgun (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Weapon: Umbrage 3-80
+                        <br>- Shadow of the Tomb Raider - Oathtaker's Bow
+                        <br>- Shadow of the Tomb Raider - Exiled Fox’s Bow (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - The Forge Content
+                        <br>- Shadow of the Tomb Raider - The Pillar Content
+                        <br>- Shadow of the Tomb Raider - Official Wallpaper (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Deluxe Extras
+                        <br>- Shadow of the Tomb Raider - Croft Edition Extras
+                        <br>- Shadow of the Tomb Raider - Season Pass (Shadow of the Tomb Raider - Definitive Upgrade)
+                        <br>- Shadow of the Tomb Raider - Spectre Gear
+                        <br>- Shadow of the Tomb Raider - Golden Eagle Gear
+                        <br>- Shadow of the Tomb Raider - Fear Incarnate Gear
+                        <br>- Shadow of the Tomb Raider - Classic Trinity Gear
+                        <br>- Shadow of the Tomb Raider - Myth Hunter Gear
+                        <br>- Shadow of the Tomb Raider - Force of Chaos Gear
+                        <br>- Shadow of the Tomb Raider - The Forge
+                        <br>- Shadow of the Tomb Raider - The Pillar
+                        <br>- Shadow of the Tomb Raider - The Nightmare
+                        <br>- Shadow of the Tomb Raider - The Price of Survival
+                        <br>- Shadow of the Tomb Raider - The Serpent's Heart
+                        <br>- Shadow of the Tomb Raider - The Grand Caiman
+                        <br>- Shadow of the Tomb Raider - Black Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Red Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - Yellow Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Shadow of the Tomb Raider - White Shadow Band Resource Pack (Shadow of the Tomb Raider)
+                        <br>- Early Access Deluxe/Croft Edition Owner
+                        <br>- Shadow of the Tomb Raider - The Path Home
+                        <br>- Shadow of the Tomb Raider - Sworn Defender
+                        <br>- Shadow of the Tomb Raider - Definitive Edition Content
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-g">
+                <div class="bg">
+                    <h4>Tải xuống:</h4>
+                </div>
+                <div class="content-download">
+                    <a href="https://drive.usercontent.google.com/download?id=1Iogi0Hk06X3OlWU9mjcYImZZ9R2tnd45&export=download&authuser=0" class="download" target="_blank">Part 1</a>
+                    <a href="https://drive.usercontent.google.com/download?id=1Vejf5zm22wjwTDKitZD1--VaQaWztJgi&export=download&authuser=0" class="download" target="_blank">Part 2</a>
+                    <a href="https://drive.usercontent.google.com/download?id=1RBNkPWm5UdpHLVMGaFVXZ0cMdzD88zv0&export=download&authuser=0" class="download" target="_blank">Part 3</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer class="info">
+        <a href="https://discord.gg/u8hVwz7W3h" class="icon" target="_blank"><i class='bx bxl-discord-alt'></i></a>
+        <a href="https://github.com/thanhnhat23" class="icon" target="_blank"><i class='bx bxl-github'></i></a>
+        <p class="copyright" style="color: rgb(116, 104, 127);">&copy; Since: 2024 Thanh Nhat</p>
+        <p class="mail" style="color: white;">Thư viện game AAA | Liên hệ: <a href="mailto:luongthanhnhat567@gmail.com" style="color: white;">luongthanhnhat567@gmail.com</a></p>
+        <div class="contact-me">
+            <a href="https://www.facebook.com/t.nhat.231026/" class="help" target="_blank">Contact</a>
+            <a href="https://github.com/thanhnhat23/project" class="help" target="_blank">Source Web</a>
+            <a href="https://stripchat.com/" class="help" target="_blank">Script Chat</a>
+        </div>
+    </footer>
+</body>
+</html>
