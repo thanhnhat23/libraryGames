@@ -14,11 +14,13 @@
     <link rel="stylesheet" href="assets/CSS/main.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="choose-music">
         <div class="avt-music">
-            <img src="../assets/Image/meme.gif" alt="avatar" class="avt-ig">
+            <img src="https://i.pinimg.com/736x/c8/42/c8/c842c87b22e9b538c8b6fe5024029f46.jpg" alt="avatar" class="avt-ig">
         </div>
         <label for="musicFile" class="btn custom">
             Chọn nhạc
@@ -71,9 +73,9 @@
                 <a href="https://github.com/thanhnhat23/project" class="list" target="_blank">Source web</a>
             </div>
             <div class="upper-right">
-                <a href="../Web_ver1/assets/HTML/porn.html" class="list" target="_blank">Porn videos</a>
+                <a href="../Web_ver1/assets/HTML/porn.html" class="list" target="_blank">Videos</a>
                 <a href="##" class="list" id="changeMusics">Musics</a>
-                <a href="register.html" class="list">Chat room</a>
+                <a href="register.html" class="list">Forum</a>
             </div>
         </div>
     </header>
@@ -120,44 +122,62 @@
         </div>
     </nav>
     <main class="content-main">
-        <h1 class="h1" style="color: #fff;">GAME SIÊU HOT</h1>
-        <h3 class="h3" style="color: rgb(0, 187, 255);">Được tải nhiều nhất</h3>
+        <h1 class="h1" style="color: #fff;">GAME HAY</h1>
+        <h3 class="h3" style="color: rgb(0, 187, 255);">Recommend nên chơi thử 1 lần</h3>
         <section class="section">
             <div class="card-page">
-                <div class="card">
+                <div class="card" data-id="the-last-of-us-part-1">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
                     <a href="#"><div class="card-bg" style="background-image: url(../assets/Image/TLOU1.jpg);"></div></a>
                     <div class="content">
                         <div class="card-category">The last of us part I</div>
                     </div>
                 </div>
-                <div class="card">
-                    <a href="#"><div class="card-bg" style="background-image: url(../assets/Image/GOW.jpg);"></div></a>
+                <div class="card" data-id="death-stranding">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
+                    <a href="assets/HTML/death-stranding.html"><div class="card-bg" style="background-image: url(../assets/Image/DSDR.jpg);"></div></a>
                     <div class="content">
-                        <div class="card-category">God of war Ragnarök</div>
+                        <div class="card-category">Death Stranding</div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="elden-ring">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
                     <a href="assets/HTML/elden-ring.html"><div class="card-bg" style="background-image: url(../assets/Image/ER.jpg);"></div></a>
                     <div class="content">
                         <div class="card-category">Elden Ring:<br> Shadow of the erd tree</div>
                     </div>
                 </div>
-                <div class="card">
-                    <a href="#"><div class="card-bg" style="background-image: url(../assets/Image/RDR2.jpg);"></div></a>
+                <div class="card" data-id="blood-borne">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
+                    <a href="assets/HTML/blood-borne.html"><div class="card-bg" style="background-image: url(https://i.pinimg.com/736x/39/78/db/3978db0c39f69b6089f76f89a839156e.jpg);"></div></a>
                     <div class="content">
-                        <div class="card-category">Red Dead Redemption 2</div>
+                        <div class="card-category">Blood Borne</div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" data-id="black-myth-wukong">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
                     <a href="assets/HTML/black-myth-wukong.html"><div class="card-bg" style="background-image: url(../assets/Image/BMW2.jpg);"></div></a>
                     <div class="content">
                         <div class="card-category">Black Myth Wukong</div>
                     </div>
                 </div>
-                <div class="card">
-                    <a href="#"><div class="card-bg" style="background-image: url(../assets/Image/W40K.jpg);"></div></a>
+                <div class="card" data-id="dark-soul-3">
+                    <div class="see"> 
+                        <p><i class="fa-solid fa-eye"></i> <span class="view-count">0</span></p>          
+                    </div>
+                    <a href="dark-souls-3.html"><div class="card-bg" style="background-image: url(../assets/Image/DS.jpg);"></div></a>
                     <div class="content">
-                        <div class="card-category">Warhammer 40K</div>
+                        <div class="card-category">Dark Souls III</div>
                     </div>
                 </div>
             </div>
@@ -251,7 +271,7 @@
         <a href="https://discord.gg/u8hVwz7W3h" class="icon" target="_blank"><i class='bx bxl-discord-alt'></i></a>
         <a href="https://github.com/thanhnhat23" class="icon" target="_blank"><i class='bx bxl-github'></i></a>
         <p class="copyright" style="color: rgb(116, 104, 127);">&copy; Since: 2024 Thanh Nhat</p>
-        <p class="mail" style="color: white;">Thư viện game AAA | Liên hệ: <a href="mailto:luongthanhnhat567@gmail.com" style="color: white;">luongthanhnhat567@gmail.com</a></p>
+        <p class="mail" style="color: white;">Library games  |  Contact me: <a href="mailto:luongthanhnhat567@gmail.com" style="color: white;">luongthanhnhat567@gmail.com</a></p>
         <div class="contact-me">
             <a href="https://www.facebook.com/t.nhat.231026/" class="help" target="_blank">Contact</a>
             <a href="https://github.com/thanhnhat23/project" class="help" target="_blank">Source Web</a>
@@ -260,6 +280,7 @@
     </footer>  
     <script src="assets/JS/main.js"></script>
     <script src="assets/JS/effect.js"></script>
-    <script src="assets/JS/changeMusic.js"></script>       
+    <script src="assets/JS/changeMusic.js"></script>    
+    <script type="module" src="assets/JS/viewTotal.js"></script>   
 </body>
 </html>
