@@ -629,11 +629,14 @@ img {
 /* ----------------------------CHOOSE MUSIC---------------------------- */
 .check {
     position: relative;
-    transform: translate(50%, 50%);
-    width: 320px;
-    height: 50px;
+    transform: translate(45%, 50%);
+    width: 350px;
+    height: 45px;
     padding: 10px;
     font-size: 20px;
+    background-color: #16171d;
+    border: #16171d solid 2px;
+    border-radius: 10px;
 }
 .choose-music {
     position: fixed;
@@ -643,8 +646,8 @@ img {
     width: 700px;
     height: 500px;
     border-radius: 10px;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
+    border: #212121 solid 1px;
+    background-color: #212121;
     padding: 20px;
     z-index: 9999999;
     opacity: 0;
@@ -658,6 +661,7 @@ img {
 }
 .bx-x {
     font-size: 50px;
+    color: #000;
 }
 #icon {
     height: 50px;
@@ -700,48 +704,38 @@ img {
     object-fit: cover;
     border-radius: 50%;
 }
-.up {
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.650);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.overlay.active {
+    display: block;
+}
+/* ----------------------------VIEW---------------------------- */
+.see {
     position: absolute;
-    top: 50%;
-    left: 88.5%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border-radius: 50%;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
-    z-index: 1;
-    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
+    top: -80px; left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    width: 52px;
+    height: 25px;
+    background-color: #000;
+    border-radius: 30px;
+    z-index: 999;
 }
-.down {
-    position: absolute;
-    top: 50%;
-    left: 84.5%;
-    transform: translate(-50%, -50%);
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    border-radius: 50%;
-    border: #dbdbdb solid 1px;
-    background-color: #dbdbdb;
-    z-index: 1;
-    box-shadow: inset 0 0 4px 5px rgba(0, 0, 0, 0.2);
-}
-.bxs-volume-low, .bxs-volume-full {
+.fa-eye {
     position: relative;
-    top: 22%; left: 2%;
-    color: black;
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-.up:hover, .down:hover {
-    background-color: black;
-    transition: 0.2s ease-in-out;
-}
-.bxs-volume-full:hover, .bxs-volume-low:hover {
-    color: white;
-    transition: 0.2s ease-in-out;
+    left: -5px;
 }

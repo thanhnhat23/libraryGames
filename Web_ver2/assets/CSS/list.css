@@ -134,7 +134,7 @@ p {
     pointer-events: none;
     z-index: 1;
 }
-.gh { 
+.gh, .tw, .ig { 
     color: #fff; 
     border: #fff solid 1.5px;
     display: flex;
@@ -146,33 +146,9 @@ p {
     height: 45px;
     background-color: #333;
 }
-.tw {
-    color: #fff; 
-    border: #fff solid 1.5px;
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    background-color: #333;
+.gh:hover, .tw:hover, .ig:hover {
+    color: rgb(0, 187, 255); border: rgb(0, 187, 255) solid 1.5px; 
 }
-.ig { 
-    color: #fff; 
-    border: #fff solid 1.5px;
-    display: flex;
-    text-decoration: none;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    background-color: #333;
-}
-.gh:hover { color: rgb(0, 187, 255); border: rgb(0, 187, 255) solid 1.5px; }
-.tw:hover { color: rgb(0, 187, 255); border: rgb(0, 187, 255) solid 1.5px; }
-.ig:hover { color: rgb(0, 187, 255); border: rgb(0, 187, 255) solid 1.5px; }
 .contact {
     display: flex;
     gap: 20px;
@@ -394,4 +370,137 @@ footer {
 }
 .hidden {
     display: none;
+}
+/* ----------------------------CHOOSE MUSIC---------------------------- */
+.check {
+    position: relative;
+    transform: translate(45%, 50%);
+    width: 350px;
+    height: 45px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #16171d;
+    border: #16171d solid 2px;
+    border-radius: 10px;
+}
+.choose-music {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    border: #212121 solid 1px;
+    background-color: #212121;
+    padding: 20px;
+    z-index: 9999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    box-shadow:0 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.choose-music.active {
+    opacity: 1;
+    visibility: visible;
+}
+.bx-x {
+    font-size: 50px;
+    color: #000;
+}
+#icon {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 5%; right: 5%;
+    cursor: pointer;
+}
+#musicFile {
+    display: none;
+}
+.custom {
+    position: absolute;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+#changeMusic {
+    left: 30%;
+    border: #000;
+}
+.custom:nth-child(2) {
+    left: 70%;
+}
+.avt-music {
+    position: relative;
+    width: 230px; 
+    height: 230px;
+    border: 6px solid black;
+    border-radius: 50%;
+    top : -3%;
+    overflow: hidden;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.avt-music img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.650);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.overlay.active {
+    display: block;
+}
+/* ----------------------------EFFECT BUTTON----------------------------- */
+.btn {
+    z-index: 999;
+    width: 150px;
+    height: 60px;
+    color: #fff;
+    background-color: rgb(0 ,187 ,255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out 0s;
+}
+.btn:hover {
+    color: rgb(0 ,187 ,255);
+}
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #fff;
+    transition: 0.4s all ease-in-out 0s;
+    border-radius: 3px;
+}
+.btn::before {
+    left: unset;
+    right: 0;
+    width: 0;
+}
+.btn:hover::before {
+    right: unset;
+    width: 100%;
+    left: 0;
 }
