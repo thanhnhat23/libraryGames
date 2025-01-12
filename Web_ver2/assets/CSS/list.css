@@ -196,7 +196,7 @@ p {
 /* ----------------------------MAIN----------------------------- */
 .content-main {
     position: relative;
-    top: 400px; left: 0;
+    top: 350px; left: 0;
     width: 100%;
     display: grid;
 }
@@ -216,7 +216,7 @@ p {
 }
 .card {
     position: relative;
-    top: 105px;
+    top: 78px; left: 20px;
     list-style: none;
     width: calc(22.22% - 10px);
     margin: 22px;   
@@ -224,7 +224,8 @@ p {
     transition: 0.3s ease;  
     cursor: pointer;
     border-radius: 15px;
-    margin-bottom: 92px;
+    margin-bottom: 100px;
+    margin-left: 22px;
 }
 .card::before {
     content: "";
@@ -305,6 +306,27 @@ p {
 .fa-eye {
     position: relative;
     left: -3px;
+}
+.bg-main {
+    position: relative;
+    top: 153px;
+    width: 100%;
+    height: 400px;
+    background-image: url(../../../assets/Image/bg-main.jpg);
+}
+.bg-color {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    bottom: 0;
+    height: 10px;
+}
+#no-results {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    width: 100%;
 }
 /* ----------------------------FOOTER----------------------------- */
 footer {
