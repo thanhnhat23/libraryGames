@@ -17,28 +17,27 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="overlay"></div>
-    <div class="choose-music">
-        <div class="avt-music">
-            <img src="https://i.pinimg.com/736x/c8/42/c8/c842c87b22e9b538c8b6fe5024029f46.jpg" alt="avatar" class="avt-ig">
-        </div>
-        <label for="musicFile" class="btn custom">
-            Chọn nhạc
-        </label>
-        <input type="file" id="musicFile" accept="audio/mp3">
-        <button id="changeMusic" class="btn custom">Đổi nhạc</button>
-        <a id="icon"><i class='bx bx-x'></i></a>
-        <input type="text" id="input" class="check" placeholder="Dán link nhạc youtube vào">
-    </div>
-    <iframe id="output" width="0" height="0" src="" title="MoreM" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-        picture-in-picture; web-share"referrerpolicy="strict-origin-when-cross-origin" 
-        allowfullscreen>
-    </iframe>
-    <audio id="music" autoplay loop muted>
-        <source src="../../version1/assets/CSS/Music/The Way Life Goes.mp3" type="audio/mp4">
-    </audio>
     <header class="main-header">
+        <div class="list-menu">
+            <div class="list-item">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
+                  <g>
+                    <path
+                      d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+                    </path>
+                  </g>
+                </svg>
+                <input id="query-medium" class="input" type="text" placeholder="Search..." name="searchbar"/>
+            </div>
+            <a class="list-item" href="">Trang chủ</a>
+            <a class="list-item" href="./html/pages.html">Thư viện game</a>
+            <a class="list-item" href="https://github.com/thanhnhat23/project" target="_blank">Source web</a>
+            <a class="list-item" href="../assets/Image/porncaocap.mp4" target="_blank">Videos</a>
+            <a class="list-item" href="./html/register.html">Forum</a>
+            <a class="list-item" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github ba'></i>Github</a>
+            <a class="list-item" href="https://www.facebook.com/t.nhat.231026/" target="_blank"><i class='bx bxl-facebook ba'></i>Facebook</a>
+            <a class="list-item" href="https://www.instagram.com/_tnht.per06/" target="_blank"><i class='bx bxl-instagram ba'></i>Instagram</a>
+        </div>
         <div class="header-top">
             <div class="thumb-header-top">
                 <svg width="644" height="82" viewBox="0 0 644 82" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,9 +45,8 @@
                 </svg>                      
             </div>
             <div class="logo">
-                <button class="logo-btn" onclick="enableSound()">
-                    <img src="../../assets/Image/logo.jpg" alt="logo" class="logo-img">
-                </button>                
+                <button class="logo-btn" onclick="enableSound()"><img src="../../assets/Image/logo.jpg" alt="logo" class="logo-img"></button>
+                <p class="title-logo">THE AQUA ( 猫野良 ) </p>                 
             </div>
             <div class="top-left">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
@@ -59,8 +57,9 @@
                   </g>
                 </svg>
                 <input id="query" class="input" type="text" placeholder="Search..." name="searchbar"/>
-              </div>
+            </div>
             <div class="top-right">
+                <div class="menu"><i class="fa-solid fa-bars"></i></div>
                 <article class="contact">
                     <a class="gh" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github'></i></a>
                     <a class="tw" href="https://www.facebook.com/t.nhat.231026/" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -504,9 +503,9 @@
         <div class="contact-me">
             <a href="https://www.facebook.com/t.nhat.231026/" class="help" target="_blank">Contact</a>
             <a href="https://github.com/thanhnhat23/project" class="help" target="_blank">Source Web</a>
-            <a href="https://stripchat.com/" class="help" target="_blank">Script Chat</a>
+            <a href="https://www.linkedin.com/in/thanh-nh%E1%BA%ADt-%E2%9C%93-533961338/" class="help" target="_blank">Linkedin</a>
         </div>
-    </footer>
+    </footer>  
     <audio id="background-music" loop preload="auto">
         <source src="https://dl.dropboxusercontent.com/scl/fi/exmlsuceimjvg5hcbcu5b/main.mp3?rlkey=enif703xhwu6w0vhymke8puuv&st=ciyd5la7" type="audio/mpeg">
     </audio>
@@ -517,5 +516,11 @@
     <script src="../js/changeMusic.js"></script>
     <script type="module" src="../js/viewTotal.js"></script>
     <script src="../js/musics.js"></script>
+    <script>
+        document.querySelector('.menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.list-menu').classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
