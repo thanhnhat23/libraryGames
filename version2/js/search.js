@@ -1,9 +1,10 @@
 const search = document.getElementById('query');
+const searchMedium = document.getElementById('query-medium');
 const cards = document.querySelectorAll('.card');
 const noResults = document.getElementById('no-results'); // Phần tử thông báo
 
-search.addEventListener('input', () => {
-    const searchTerm = search.value.toLowerCase();
+const handleSearch = (event) => {
+    const searchTerm = event.target.value.toLowerCase(); // Lấy giá trị từ input hiện tại
     let visibleCount = 0;
 
     cards.forEach(card => {
@@ -22,4 +23,8 @@ search.addEventListener('input', () => {
     } else {
         noResults.classList.add('hidden');
     }
-});
+};
+
+// Gán sự kiện cho cả hai input
+search.addEventListener('input', handleSearch);
+searchMedium.addEventListener('input', handleSearch);
