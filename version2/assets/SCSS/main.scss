@@ -1,0 +1,746 @@
+@mixin absolute-center($top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%);
+}
+@mixin center($content) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+}
+@mixin res($width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin breakpoint($size) {
+    @if $size == small {
+      @media (max-width: 576px) { @content; }
+    } @else if $size == medium {
+      @media (max-width: 768px) { @content; }
+    } @else if $size == large {
+      @media (max-width: 992px) { @content; }
+    } @else if $size == xlarge {
+      @media (max-width: 1200px) { @content; }
+    }
+}
+@mixin absolute-center($top: 50%, $left: 50%) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    @include res(100%, 100vh);
+    scrollbar-width: none;
+}
+body::before {
+    content: "";
+    position: fixed;
+    @include res(100%, 100%);
+    z-index: -1;
+    background: url(https://images3.alphacoders.com/135/thumb-1920-1352926.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5) saturate(0) contrast(1.3) blur(1px);
+}
+
+/* HEADER */
+.main-header {
+    @include res(100%, 153px);
+    position: relative;
+}
+.thumb-header-top {
+    position: relative;
+    top: 70px;
+    @include center(center);
+    @include breakpoint(medium) {
+        @include res(0, 0);
+    }
+}
+.thumb-header-upper {
+    position: relative;
+    top: 82px;
+    @include center(center);
+    @include breakpoint(medium) {
+        @include res(0, 0);
+    }
+    z-index: 1;
+}
+.header-top {
+    position: relative;
+    @include res(100%, 71px);
+    background-color: #212121;
+    z-index: 3;
+    @include breakpoint(medium) {
+        position: fixed;
+    }
+}
+.header-upper {
+    position: relative;
+    @include res(100%, 82px);
+    background-color: #000;
+    border-radius: 0 0 5px 5px;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+.logo-img, .logo-btn {
+    @include res(100px, 100px);
+    z-index: 2;
+    border-radius: 50%;
+    border: 1px solid black;
+    cursor: pointer;
+    @include breakpoint(medium) {
+        @include res(40px, 40px);
+    }
+}
+.logo {
+    position: relative;
+    top: -50px; left: -8.5px;
+    @include center(center);
+    width: 100vw;
+    @include breakpoint(medium) {
+        top: 0px;
+        left: 10px;
+        justify-content: left;
+    }
+}
+.title-logo {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+    display: none;
+    z-index: 2;
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+.top-right {
+    @include center(center);
+    @include res(40vw, 71px);
+    top: 0; right: 0;
+    position: absolute;
+    @include breakpoint(medium) {
+        justify-content: right;
+    }
+}
+.contact {
+    @include center(center);
+    gap: 20px;
+}
+.gh, .ig, .tw {
+    @include res(45px, 45px);
+    @include center(center);
+    color: #fff; 
+    border: #fff solid 2px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #333;
+    font-size: 30px;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+.gh:hover, .ig:hover, .tw:hover { 
+    color: rgb(0, 187, 255); 
+    border: rgb(0, 187, 255) solid 1.5px; 
+}
+.menu {
+    @include res(70px, 70px);
+    @include center(center);
+    color: #fff;
+    font-size: 25px;
+    z-index: 3;
+    display: none;
+    .fa-bars {
+        transition: transform 0.5s ease;
+    }
+    &.active {
+        background-color: #333;
+        .fa-bars {
+            transform: rotate(90deg);
+        }
+    }
+    @include breakpoint(medium) {
+        display: flex;
+    }
+}
+.list-menu {
+    @include res(100vw, auto);
+    position: fixed;
+    background-color: #212121;
+    z-index: 3;
+    top: -100%; right: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    .list-item {
+        @include center(center);
+        @include res(100%, 70px);
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #333;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .ba {
+        margin-right: 10px; 
+    }
+    &.active {
+        opacity: 1;
+        top: 71px;
+    }
+}
+.upper-left, .upper-right {
+    @include center(center);
+    @include res(800px, 82px);
+    float: left;
+    gap: 90px;
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 3;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+.upper-left {
+    top: 0; left: 0;
+}
+.upper-right {
+    top: 0; right: 0;
+}
+.list {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+.list:hover, .list.active {
+    color: rgb(0, 187, 255);
+}
+
+/* NAV */
+.background {
+    position: relative;
+    @include res(100%, 80vh);
+    z-index: 0;
+    @include breakpoint(medium) {
+        top: -81px;
+        height: 26vh;
+    }
+    pointer-events: default;
+}
+.slider {
+    position: absolute;
+    @include res(100%, 80vh);
+    overflow: hidden;
+    @include breakpoint(medium) {
+        height: 26vh;
+    }
+}
+.slides {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+.slide {
+    position: relative;
+    min-width: 100%;
+    height: 70vh;
+    @include breakpoint(medium) {
+        height: 23vh;
+    }
+}
+.slide-img {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+}
+.active-slide {
+    display: block;
+}
+.dots {
+    @include absolute-center(96%, 50%);
+    @include center(center);
+    color: #fff;
+    width: 100vh;
+    margin: 0; padding: 0;
+    z-index: 2;
+}
+.dot {
+    pointer-events: none;
+    @include res(8px, 8px);
+    margin: 0 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    &.active {
+        background-color: rgb(0 ,187 ,255);
+    }
+    @include breakpoint(medium) {
+        @include res(4px, 4px);
+        margin: 0 3px;
+    }
+}
+.button {
+    font-size: 32px;
+    @include absolute-center(45%, 50%);
+    @include center(space-between);
+    @include res(100%, 40px);
+    z-index: 1;
+    @include breakpoint(medium) {
+        display: none;
+    }
+}
+.prev:hover, .next:hover {
+    background-color: #fff;
+    color: rgb(0 ,187 ,255);
+}
+.button a {
+    @include center(center);
+    @include res(40px, 50px);
+    text-decoration: center;
+    background-color: rgb(0 ,187 ,255);
+    color: #fff;
+    line-height: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+}
+.button {
+    .prev {
+        border-radius: 0 5px 5px 0;
+    }
+    .next {
+        border-radius: 5px 0 0 5px;
+    }
+}
+.end-card {
+    @include res(100%, 20px);
+    @include absolute-center(100%, 50%);
+    background-color: #000;
+    @include breakpoint(medium) {
+        height: 10px;
+    }
+}
+.thumb-end-card {
+    @include absolute-center(95%, 50%);
+    @include center(center);
+    z-index: 1;
+    width: 100%;
+    .svg {
+        @include res(248px, 64px);
+        @include breakpoint(medium) {
+            @include res(124px, 32px);
+        }
+    }
+}
+.more {
+    @include absolute-center(85%, 50%);
+    @include breakpoint(medium) {
+        @include absolute-center(75%, 50%);
+    }
+}
+
+// EFFECT BUTTON
+.btn {
+    z-index: 1;
+    @include res(150px, 60px);
+    @include center(center);
+    color: #fff;
+    background-color: rgb(0 ,187 ,255);
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s all ease-in-out 0s;
+    &:hover {
+        color: rgb(0 ,187 ,255);
+    }
+    &:hover::before {
+        right: unset;
+        width: 100%;
+        left: 0;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        @include res(100%, 100%);
+        z-index: -1;
+        background-color: #fff;
+        transition: 0.4s all ease-in-out 0s;
+        border-radius: 3px;
+        left: unset;
+        right: 0;
+        width: 0;
+    }
+    @include breakpoint(medium) {
+        @include res(70px, 25px);
+        font-size: 10px;
+    }
+}
+
+/* MAIN */
+.content-main {
+    top: 55vw;
+    @include res(100%, 100%);
+    @include absolute-center(1500px, 50%);
+    @include breakpoint(medium) {
+        @include res(100vw, 50vh);
+        @include absolute-center(135vw, 50%);
+    }
+}
+.card-page {
+    @include res(1250px, 850px);
+    @include absolute-center(30vw, 50%);
+    display: grid;
+    // Nhóm 3 phần tử 1 hàng
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    border-radius: 15px 15px 0 0; 
+    top: 34vw;
+    @include breakpoint(medium) {
+        @include absolute-center(60vw, 50%);
+        @include res(205px, 300px);
+        grid-template-columns: repeat(2, 0.2fr);
+        gap: 5px;
+    }
+}
+.card {
+    @include res(400px, 400px);
+    position: relative;
+    list-style: none;
+    transition: 0.3s ease;  
+    cursor: pointer;
+    border-radius: 15px;
+    &:hover .card-category {
+        opacity: 1;
+        bottom: 0;
+    }
+    @include breakpoint(medium) {
+        @include res(100px, 100px);
+    }
+}
+.card::before {
+    content: "";
+    display: block;
+    width: 100vw;
+}
+.card-bg {
+    @include res(400px, 400px);
+    position: absolute;
+    bottom: 0; right: 0;
+    border-radius: 15px 15px 2px 2px;
+    background-size: 100%;
+    background-position: center;
+    filter: brightness(0.9) saturate(1) contrast(1);
+    transform-origin: bottom;
+    transform: scale(1) translateZ(0);
+    transition: 0.3s ease;
+    background-repeat: no-repeat;
+    @include breakpoint(medium) {
+        @include res(100px, 100px);
+        border-radius: 5px;
+    }
+}
+.card-page:hover > .card:not(:hover) .card-bg,
+.card-page:hover > .card:not(:hover) .card-category{
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(8px);
+}
+.content {
+    display: flex;
+    position: absolute;
+    bottom: 0; right: 0;
+    overflow: hidden;
+}
+.card-category {
+    @include center(center);
+    @include res(400px, 150px);
+    text-align: center;
+    position: relative;
+    color: white;
+    border-radius: 12px 12px 2px 2px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    fill-opacity: 0.5;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    background: rgba(0, 0, 0, 0.650);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    bottom: -100px;
+    @include breakpoint(medium) {
+        @include res(100px, 100px);
+        font-size: 7px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+    }
+}
+.more2 {
+    @include absolute-center(61vw, 50%);
+    @include breakpoint(medium) {
+        @include absolute-center(110vw, 50%);
+    }
+}
+.h1, .h3, .text {
+    @include center(center);
+    font-weight: bold;
+}
+.h3 {
+    position: relative;
+    margin-bottom: 150px;
+    font-size: 30px;
+    @include breakpoint(medium) {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+}
+.h1 {
+    font-size: 80px;
+    @include breakpoint(medium) {
+        font-size: 25px;
+        margin-bottom: 3px;
+    }
+}
+/* VIEW */
+.see {
+    @include center(center);
+    @include res(50px, 25px);
+    position: absolute;
+    top: 15px; left: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #000;
+    border-radius: 30px;
+    z-index: 2;
+    .fa-eye {
+        @include absolute-center(50%, 30%);
+    }
+    .view-count {
+        @include absolute-center(50%, 65%);
+    }
+    @include breakpoint(medium) {
+        @include res(23px, 12px);
+        top: 5px; left: 5px;
+        font-size: 6px;
+        .fa-eye {
+            @include absolute-center(50%, 25%);
+        }
+        .view-count {
+            @include absolute-center(50%, 65%);
+        }
+    }
+}
+
+/* ASIDE */
+.info-game {
+    @include res(100%, 580px);
+    @include absolute-center(2650px, 50%);
+    @include breakpoint(medium) {
+        @include res(100%, 200px);
+        @include absolute-center(950px, 50%);
+    }
+}
+.title {
+    @include res(100%, 300px);
+    @include breakpoint(medium) {
+        @include res(100%, 150px);
+    }
+}
+.text {
+    position: relative;
+    top: -130px;
+    @include breakpoint(medium) {
+        top: 0;
+        font-size: 10px;
+    }
+}
+.wrapper {
+    overflow: hidden;
+    @include res(100%, 280px);
+    @include breakpoint(medium) {
+        @include res(100%, 140px);
+    }
+}
+.carousel {
+    transition: transform 0.5s ease;
+}
+.carousel .card-trailer {
+    @include res(600px, 290px);
+    list-style: none;
+    border-radius: 15px;
+    @include breakpoint(medium) {
+        @include res(100px, 100px);
+    }
+}
+.trailer {
+    @include res(600px, 200px);
+    position: relative;
+    bottom: -28%; left: 0;
+    background-color: #212121;
+    border-radius: 15px;
+    border: #000 1px solid;
+    box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.8);
+    @include breakpoint(medium) {
+        @include res(45vw, 90px);
+    }
+}
+.trailer-img {
+    @include absolute-center(30%, 20%);
+    border-radius: 15px 15px 0 0;
+    border: #333 1px solid;
+    box-shadow: 0 0 5px 2px #333;
+    @include breakpoint(medium) {
+        @include absolute-center(39%, 27%);
+        box-shadow: 0 0 2px 1px #333;
+        border-radius: 10px;
+    }
+}
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3);
+    gap: 50px;
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(2);
+        gap: 120px;
+    }
+}
+.card-trailer .trailer .trailer-img {
+    @include res(200px, 280px);
+    object-fit: cover;
+    @include breakpoint(medium) {
+        @include res(80px, 110px);
+    }
+}
+.info-trailer {
+    top: -70px; left: 44%;
+    position: relative;
+    font-weight: bold;
+    color: #fff;
+    width: 50%;
+    font-size: 20px;
+    @include breakpoint(medium) {
+        font-size: 6.5px;
+        width: 90%;
+        top: -40px; left: 100%;
+    }
+}
+.if {
+    @include res(120px, 40px);
+    position: relative;
+    bottom: 10px; left: 44%;
+    font-size: 16px;
+    @include breakpoint(medium) {
+        @include res(50px, 20px);
+        font-size: 7px;
+        bottom: 15px; left: 100%;
+    }
+}
+
+/* FOOTER */
+.info {
+    @include res(100%, 200px);
+    @include absolute-center(3250px, 50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    padding: 25px;
+    font-size: 30px;
+    background-color: #212121;
+    border-top: #333 2px solid;
+    box-shadow: #333 0 0 5px 2px;
+    @include breakpoint(medium) {
+        @include absolute-center(1250px, 50%);
+        @include res(100%, 115px);
+        gap: 10px; 
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+.icon {
+    @include res(35px, 35px);
+    @include center(center);
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    background-color: #333;
+    border-radius: 10px;
+    @include breakpoint(medium) {
+        font-size: 14px;
+        @include res(25px, 25px);
+    }
+}
+.copyright, .mail {
+    position: absolute;
+    cursor: default;
+}
+.copyright {
+    top: 75px;
+    font-size: 17px;
+    @include breakpoint(medium) {
+        top: 40px;
+        font-size: 10px;
+    }
+}
+.mail {
+    top: 110px;
+    font-size: 14px;
+    @include breakpoint(medium) {
+        top: 60px;
+        font-size: 8px;
+    }
+}
+.contact-me {
+    position: absolute;
+    top: 145px; left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include breakpoint(medium) {
+        top: 85px;
+    }
+}
+.help {
+    @include res(150px, 40px);
+    @include center(center);
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 6px;
+    &:hover {
+        background-color: #333;
+    }
+    @include breakpoint(medium) {
+        @include res(75px, 20px);
+        font-size: 8px;
+    }
+}
