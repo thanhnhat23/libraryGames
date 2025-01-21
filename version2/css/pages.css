@@ -209,8 +209,8 @@ body::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  border: #fff solid 2px;
+  color: rgb(146, 146, 146);
+  border: rgb(146, 146, 146) solid 2.5px;
   text-decoration: none;
   border-radius: 50%;
   background-color: #333;
@@ -223,8 +223,8 @@ body::before {
 }
 
 .gh:hover, .ig:hover, .tw:hover {
-  color: rgb(0, 187, 255);
-  border: rgb(0, 187, 255) solid 1.5px;
+  color: #fff;
+  border: #fff solid 2.5px;
 }
 
 .menu, .search {
@@ -368,13 +368,13 @@ body::before {
 }
 
 .list {
-  color: #fff;
+  color: rgb(146, 146, 146);
   text-decoration: none;
   transition: 0.2s ease;
 }
 
 .list:hover, .list.active {
-  color: rgb(0, 187, 255);
+  color: #fff;
 }
 
 /* Background */
