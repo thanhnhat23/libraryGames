@@ -2,24 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Aqua - Thư viện game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="The Aqua - Thư viện game" />
-    <meta property="og:description" content="Download game AAA miễn phí trọn đời" />
-    <meta property="og:image" content="../../../assets/Image/ThumbNail.png" />
-    <meta property="og:url" content="https://thanhnhat23.github.io/project/" />
-    <meta property="og:site_name" content="AQUA_KEEPER" />
+    <title>Neko Nora - Games Library</title>
+    <meta property="og:site_name" content="Neko nora (猫野良)" /> <!-- Site name -->
+    <meta property="og:url" content="https://nekonora.vercel.app" /> <!-- Link web -->
+    <meta property="og:image" content="../assets/Icon/nekonora.png" /> <!-- Thumbnai -->
+    <meta property="og:title" content="Neko nora - 猫野良" />
     <meta property="og:type" content="website" />
-    <link rel="icon" href="../../../assets/Image/logo2.png" type="image/png">
+    <link rel="icon" type="image/svg+xml" href="../assets/Icon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/Icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/Icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/Icon/favicon-16x16.png">
+    <link rel="icon" sizes="192x192" type="image/png" href="../assets/Icon/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" type="image/png" href="../assets/Icon/android-chrome-512x512.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="manifest" href="../assets/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jockey+One"/>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="main-header">
-        <div class="list-menu">
-            <div class="list-item">
+        <div class="list-search">
+            <div class="list">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
                   <g>
                     <path
@@ -29,11 +36,13 @@
                 </svg>
                 <input id="query-medium" class="input" type="text" placeholder="Search..." name="searchbar"/>
             </div>
-            <a class="list-item" href="">Trang chủ</a>
+        </div>
+        <div class="list-menu">
+            <a class="list-item" href="../index.html">Trang chủ</a>
             <a class="list-item" href="./html/pages.html">Thư viện game</a>
             <a class="list-item" href="https://github.com/thanhnhat23/project" target="_blank">Source web</a>
-            <a class="list-item" href="../assets/Image/porncaocap.mp4" target="_blank">Videos</a>
-            <a class="list-item" href="./html/register.html">Forum</a>
+            <a class="list-item" href="../../version1/assets/HTML/porn.html" target="_blank">Videos</a>
+            <a class="list-item" href="../html/register.html">Forum</a>
             <a class="list-item" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github ba'></i>Github</a>
             <a class="list-item" href="https://www.facebook.com/t.nhat.231026/" target="_blank"><i class='bx bxl-facebook ba'></i>Facebook</a>
             <a class="list-item" href="https://www.instagram.com/_tnht.per06/" target="_blank"><i class='bx bxl-instagram ba'></i>Instagram</a>
@@ -45,8 +54,8 @@
                 </svg>                      
             </div>
             <div class="logo">
-                <button class="logo-btn" onclick="enableSound()"><img src="../../assets/Image/logo.jpg" alt="logo" class="logo-img"></button>
-                <p class="title-logo">THE AQUA ( 猫野良 ) </p>                 
+                <button class="logo-btn"><img src="../assets/Icon/nekonora.png" alt="logo" class="logo-img"></button>
+                <p class="title-logo">NEKO NORA </p>                 
             </div>
             <div class="top-left">
                 <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon">
@@ -59,6 +68,7 @@
                 <input id="query" class="input" type="text" placeholder="Search..." name="searchbar"/>
             </div>
             <div class="top-right">
+                <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div class="menu"><i class="fa-solid fa-bars"></i></div>
                 <article class="contact">
                     <a class="gh" href="https://github.com/thanhnhat23" target="_blank"><i class='bx bxl-github'></i></a>
@@ -491,8 +501,8 @@
                         </div>
                     </a>
                 </div>
-                <div id="no-results" class="hidden">Không tìm thấy game hoặc game chưa được thêm vào</div>
             </div>
+            <div id="no-results" class="hidden">Không tìm thấy game hoặc game chưa được thêm vào</div>
         </section>
     </main>
     <footer class="info">
@@ -506,21 +516,9 @@
             <a href="https://www.linkedin.com/in/thanh-nh%E1%BA%ADt-%E2%9C%93-533961338/" class="help" target="_blank">Linkedin</a>
         </div>
     </footer>  
-    <audio id="background-music" loop preload="auto">
-        <source src="https://dl.dropboxusercontent.com/scl/fi/exmlsuceimjvg5hcbcu5b/main.mp3?rlkey=enif703xhwu6w0vhymke8puuv&st=ciyd5la7" type="audio/mpeg">
-    </audio>
-    <script src="../js/main.js"></script>
     <script src="../js/effect.js"></script>
-    <script src="../js/addGame.js"></script>
     <script src="../js/search.js"></script>
-    <script src="../js/changeMusic.js"></script>
     <script type="module" src="../js/viewTotal.js"></script>
-    <script src="../js/musics.js"></script>
-    <script>
-        document.querySelector('.menu').addEventListener('click', function() {
-            this.classList.toggle('active');
-            document.querySelector('.list-menu').classList.toggle('active');
-        })
-    </script>
+    <script src="../js/handleMenu.js"></script>
 </body>
 </html>
