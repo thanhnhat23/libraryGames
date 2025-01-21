@@ -208,9 +208,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     startInterval();
 });
-
-// Hiện menu
-document.querySelector('.menu').addEventListener('click', function() {
-    this.classList.toggle('active');
-    document.querySelector('.list-menu').classList.toggle('active');
-})
