@@ -388,3 +388,9 @@ p {
 .help:hover {
     background-color: #333;
 }
+
+.link-more {
+    text-decoration: none;
+    color: #0073cf;
+    font-weight: bold;
+}
